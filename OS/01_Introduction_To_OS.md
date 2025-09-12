@@ -1,5 +1,4 @@
 # Introduction to OS
----
 
 ## OS and Main Functions
 
@@ -135,7 +134,6 @@
 - Securing system calls from malicious programs
 - Synchronization in shared-memory multithreading
 
-***
 
 ## References
 
