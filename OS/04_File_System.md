@@ -1,6 +1,4 @@
-Below are concise, structured notes covering all major File System concepts for top tech interview readiness. Each topic offers focused definitions, examples, FAANG-style questions with answers, and tricky edge cases that are frequently tested.
 
-***
 
 ## File System and Its Components
 
