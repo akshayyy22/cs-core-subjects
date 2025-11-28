@@ -205,3 +205,49 @@ Limit → size/length of the segment
 
 Simple example:
 A book has chapters of different sizes → each chapter is a segment.
+
+
+## 15. Real Time Operating System (RTOS)
+
+A **Real Time Operating System (RTOS)** is an operating system that must respond within a fixed and guaranteed time.  
+It is used in time-critical systems like medical devices, robots, aircraft control etc.
+
+## Types of RTOS
+
+| Type | Explanation (Simple) | Examples |
+|---|---|---|
+| **Hard RTOS** | Deadline missed = system fails. No delay allowed. | Pacemakers, Airbag systems |
+| **Firm RTOS** | Delay acceptable rarely. Missing deadline reduces quality. | Industrial automation |
+| **Soft RTOS** | Small delays allowed, not harmful. | Multimedia, Gaming |
+
+
+# 16. Difference Between Main Memory & Secondary Memory
+
+| Main Memory (Primary) | Secondary Memory (Storage) |
+|---|---|
+| Very Fast | Slower than RAM |
+| Temporary / Volatile | Permanent / Non-Volatile |
+| Data lost after power off | Data remains after power off |
+| Directly used by CPU | Used for long-term storage |
+| Examples: RAM, Cache | Examples: HDD, SSD, Pendrive |
+
+# Static Binding vs Dynamic Binding
+
+| Static Binding | Dynamic Binding |
+|---|---|
+| Happens at **compile time** | Happens at **run time** |
+| Faster execution | Slower execution |
+| Less flexible | More flexible |
+| Example: Function Overloading | Example: Function Overriding |
+
+# 17. CPU Scheduling Algorithms – Simple Words
+
+| Algorithm | Meaning |
+|---|---|
+| **FCFS (First Come First Serve)** | Process that arrives first gets CPU first. |
+| **SJF (Shortest Job First)** | Process with smallest execution time runs first. |
+| **SRTF (Shortest Remaining Time First)** | New shorter task can interrupt running process (preemptive SJF). |
+| **LRTF (Longest Remaining Time First)** | Opposite of SRTF. Longest job given CPU first. |
+| **Priority Scheduling** | CPU given to process with highest priority. |
+| **Round Robin** | Each process gets fixed CPU time slice (fair rotation). |
+
