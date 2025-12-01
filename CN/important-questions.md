@@ -251,3 +251,57 @@ It is used in time-critical systems like medical devices, robots, aircraft contr
 | **Priority Scheduling** | CPU given to process with highest priority. |
 | **Round Robin** | Each process gets fixed CPU time slice (fair rotation). |
 
+
+# 18. Producer–Consumer Problem
+It is a **classic problem in Operating Systems** where two processes share a common resource (a buffer).
+
+- **Producer** → Produces items and puts them into a buffer.
+- **Consumer** → Takes items from the buffer and uses them.
+- **Problem** → Producer should not add to a **full buffer**, and consumer should not try to remove from an **empty buffer**.
+- **Solution** → Use synchronization techniques like **semaphore / mutex** to avoid conflict.
+
+---
+
+# 19. Banker’s Algorithm
+Used for **deadlock avoidance** in OS.
+
+- Works like a banker giving loans.
+- A process must tell **maximum resources needed**.
+- System checks if giving resources will still make it safe (no deadlock).
+- If **safe** → resources allocated.  
+  If **unsafe** → process waits.
+
+**Goal:** Make sure system is always in a **safe state**.
+
+---
+
+# 20. Cache
+Cache is a **small, fast memory** located closer to the CPU.
+
+- Stores frequently accessed data.
+- Helps CPU get data **faster** instead of going to slow main memory (RAM).
+- Improves performance by reducing access time.
+
+**Analogy:**  
+ Like keeping your frequently used books on your desk instead of bookshelf.
+
+---
+
+# 21. Difference Between Direct Mapping and Associative Mapping
+
+| Feature       | Direct Mapping                 | Associative Mapping        |
+|---------------|--------------------------------|----------------------------|
+| Flexibility   | Fixed location in cache        | Can be placed anywhere in cache |
+| Speed         | Faster                         | Slower than direct        |
+| Hardware      | Simple                         | More complex              |
+| Hit ratio     | Lower (limited placement)      | Higher (free placement)   |
+
+---
+
+# 22. Multitasking vs Multiprocessing
+
+| Feature       | Multitasking                             | Multiprocessing                  |
+|---------------|-----------------------------------------|---------------------------------|
+| CPU usage     | One CPU running multiple tasks **one by one** quickly so it feels parallel | **Two or more CPUs** running tasks at the same time |
+| Task handling | Tasks share CPU time                     | Each CPU can handle its own task |
+| Example       | Using WhatsApp & listening to music on same device | Modern PC with multi-core processors |
