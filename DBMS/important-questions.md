@@ -111,5 +111,176 @@ Instead of storing all users in one big database, split them:
 Each shard is handled separately, improving efficiency.
 
 
+## 9. Keys in DBMS
+
+### Keys are attributes that help uniquely identify records in a table.
+
+### Types of Keys
+
+- Primary Key → Uniquely identifies a record; cannot be NULL.
+
+- Candidate Key → Attributes that can potentially be a primary key.
+
+- Super Key → Any attribute(s) that uniquely identify a record (includes candidate keys).
+
+- Composite Key → Key made from more than one attribute.
+
+- Foreign Key → Establishes a link between two tables; references primary key of another table.
+
+- Alternate Key → Candidate keys not chosen as primary key.
+
+- Unique Key → Similar to primary key but allows one NULL value.
 
 
+
+### 10. Types of Relationships in DBMS
+
+## Defines how rows in different tables relate to each other.
+
+### Relationship Types
+
+- One-to-One (1:1)
+
+  One record in A ↔ One record in B
+
+  Example: Person ↔ Passport
+
+- One-to-Many (1:N)
+
+  One record in A → Many in B
+
+  Example: Customer → Orders
+
+- Many-to-One (N:1)
+
+  Many records in A → One in B
+
+  Example: Students → Department
+
+- Many-to-Many (M:N)
+
+  Many in A ↔ Many in B
+
+  Requires a junction table
+
+  Example: Students ↔ Courses
+
+----
+
+### Data Abstraction in DBMS
+
+  DBMS hides unnecessary complexity.
+
+## Three Levels
+
+  1. Physical Level (Lowest)
+
+      How data is stored internally (files, blocks, indexes).
+
+  2. Logical/Conceptual Level (Middle)
+
+      Database structure → tables, relationships, constraints.
+
+  3. View/External Level (Highest)
+
+      What end-users see → custom views, filtered data.
+
+### 11. Indexing in DBMS
+
+    Indexes help in faster searching, like a book index.
+
+    Types of Indexes
+
+    1. Primary Index
+
+    2. Secondary Index
+
+    3. Clustered Index (sorts the table itself)
+
+    4. Non-Clustered Index (separate structure)
+
+    5. B-Tree Index
+
+    6. Hash Index
+
+
+### 12. DDL (Data Definition Language)
+
+    Used to define or modify database structure.
+
+  Commands
+
+    - CREATE → Create tables/databases
+
+    - ALTER → Modify structure
+
+    - DROP → Delete table/database
+
+    - TRUNCATE → Remove all rows (cannot be rolled back)
+
+    - RENAME → Rename table
+
+
+### 13. DML (Data Manipulation Language)
+
+    - Used to manage data inside tables.
+
+    Commands
+
+    - SELECT → Retrieve data
+
+    - INSERT → Add data
+
+    - UPDATE → Modify data
+
+    - DELETE → Remove data
+
+### 14. Normalization
+
+  - Process of organizing data to reduce redundancy and improve consistency.
+
+  Simple Definition:
+
+  Store clean, non-repetitive data to avoid update issues.
+
+  Types (Forms)
+
+  - 1NF:
+
+    No repeating groups
+
+    Atomic values
+
+  - 2NF:
+
+    In 1NF
+
+    No partial dependency (on part of composite key)
+
+  - 3NF:
+
+    In 2NF
+
+    No transitive dependency (non-key → non-key)
+
+  - BCNF:
+
+    Stronger 3NF
+
+    Every determinant = candidate key
+
+  -  4NF / 5NF:
+
+    Deal with multivalued and join dependencies (rare)
+
+  ### 15. Denormalization
+
+    - Opposite of normalization.
+
+    Simple Explanation:
+
+    Add redundancy intentionally to improve performance.
+
+    Example:
+
+    Instead of calculating total orders each time, store total in the customer's table.
