@@ -484,3 +484,95 @@ FROM Employee e
 JOIN Employee m ON e.manager_id = m.id;
 ```
 
+# 22. Inner Join vs Outer Join
+
+## INNER JOIN
+- Returns **only matching rows** between two tables.
+- Non-matching rows are **not shown**.
+- **Example:** Show students who *have* marks.
+
+## OUTER JOIN
+Returns matching rows **plus** non-matching rows.
+
+### Types:
+- **LEFT OUTER JOIN** → all rows from left table + matching right rows  
+- **RIGHT OUTER JOIN** → all rows from right table + matching left rows  
+- **FULL OUTER JOIN** → all rows from both tables, even if not matching
+
+---
+
+# 23. 2-Tier vs 3-Tier Architecture
+
+## 2-Tier Architecture
+- Only **Client ↔ Database**
+- Client talks directly to DB.
+- Example: Desktop app directly connected to MySQL.
+
+**Simple:** 2 layers → **Client + Database**
+
+## 3-Tier Architecture
+- **Client ↔ Application Server ↔ Database**
+- Client never talks directly to DB.
+- Example: Web app → Browser → Backend → DB.
+
+**Simple:** 3 layers → **UI + Logic + DB**
+
+---
+
+# 24. TRUNCATE vs DELETE
+
+## DELETE
+- Deletes **specific rows** using WHERE.
+- **Slow** (row-by-row).
+- **Can be rolled back**.
+- **Triggers fire**.
+- Does not reset auto-increment.
+
+## TRUNCATE
+- Removes **all rows** instantly.
+- **Very fast**.
+- **Cannot be rolled back** in many DBs.
+- **Triggers do NOT fire**.
+- **Resets auto-increment**.
+
+---
+
+# 25. Intension vs Extension (Database)
+
+## Intension
+- The **schema/structure** of the table.
+- Column names + data types.
+- Stable definition.
+
+**Think:** What the table *looks like*.
+
+## Extension
+- The **actual data/rows** stored in the table at a given time.
+
+**Think:** What the table *contains*.
+
+---
+
+# 26. Locks (Shared vs Exclusive)
+
+## What is a Lock?
+A lock controls read/write access to a row/table to avoid conflicts.
+
+---
+
+## Shared Lock (S-Lock)
+- Allows **read-only** access.
+- Multiple transactions can read together.
+- No one can write.
+
+**Think:** “You can read, I can read… but nobody edits.”
+
+---
+
+## Exclusive Lock (X-Lock)
+- Allows **writing** (insert/update/delete).
+- Only one transaction can hold it.
+- Others cannot read or write.
+
+**Think:** “I’m editing this, nobody touch it!”
+
